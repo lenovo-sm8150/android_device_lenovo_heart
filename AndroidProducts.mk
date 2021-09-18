@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_heart.mk
+    $(LOCAL_DIR)/derp_heart.mk
