@@ -15,12 +15,10 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Color of the UDFPS pressed view -->
-    <color name="config_udfpsColor">#00ffff</color>
-
-    <!-- HBM type of UDFPS overlay.
-            0 - GLOBAL HBM
-            1 - LOCAL HBM
-    -->
-    <integer name="config_udfpsHbmType">0</integer>
+    <!-- Color of the UDFPS pressed view: an opaque disc, which is the platform
+         default. Untested hypothesis: with local HBM raised underneath the dot
+         by the HAL (fod_hbm_en) a tinted color should not be needed, so the
+         plain white dot is kept instead of a cyan one. If the sensor struggles
+         to read it on hardware, #00ffff is the value to fall back to. -->
+    <color name="config_udfpsColor">#ffffffff</color>
 </resources>

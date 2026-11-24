@@ -34,16 +34,23 @@
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
 
-    <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
+    <!-- The properties of a UDFPS sensor in pixels, in the order listed below:
+         * sensorLocationX = screen width / 2, the sensor is centred on the panel
+         * sensorLocationY = FOD pos Y + FOD size / 2
+         * sensorRadius = FOD size / 2
+         The FOD rect the stock firmware reports for this panel is
+         x=444 y=1605 size=192 (SOONG_CONFIG_LENOVO_MSMNILE_FOD_POS_X/Y/SIZE in
+         BoardConfig.mk before the UDFPS overlays replaced them), which puts the
+         centre at 540,1701 with a radius of 96. -->
     <integer-array name="config_udfps_sensor_props" translatable="false" >
         <!--
         <item>sensorLocationX</item>
         <item>sensorLocationY</item>
         <item>sensorRadius</item>
         -->
-        <item>533</item>
-        <item>1694</item>
-        <item>101</item>
+        <item>540</item>
+        <item>1701</item>
+        <item>96</item>
     </integer-array>
 
     <!-- How long it takes for the HW to start illuminating after the illumination is requested. -->
